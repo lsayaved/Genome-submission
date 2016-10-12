@@ -1,5 +1,5 @@
 # Compendium of my bioinformatic scripts
-This repository contains bioinformatic scripts mainly written in Perl without any warranty!
+This repository contains bioinformatic scripts mainly without any warranty!
 
 ## Genome submission to EMBL
 -Use of Sequin to produce an EMBL file for genome submission (the input files are the result of GenDB: a .tbl file and a fasta file) The EMBL validator somehow missed some of the following errors
