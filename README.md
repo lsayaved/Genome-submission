@@ -2,7 +2,7 @@
 This repository contains bioinformatic scripts without any warranty!
 
 ## Genome submission to EMBL
-- Use [Sequin](https://www.ncbi.nlm.nih.gov/Sequin/) to produce an EMBL file for genome submission. As input files for Sequin, I used the tbl and the fasta file produced by GenDB
+- Use [Sequin](https://www.ncbi.nlm.nih.gov/Sequin/) to produce an EMBL file for genome submission. As input files for Sequin, I used the tbl and the fasta file produced by [GenDB](https://www.uni-giessen.de/fbz/fb08/Inst/bioinformatik/software/gendb)
 
   
 ###### Errors during the genome submission 
