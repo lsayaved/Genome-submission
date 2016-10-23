@@ -6,9 +6,11 @@ This repository contains bioinformatic scripts without any warranty!
 
   
 ###### Errors during the genome submission 
-The EMBL validator somehow missed some of the following errors
+The EMBL [validator V. 1.1.145] (https://mvnrepository.com/artifact/uk.ac.ebi.ena.sequence/embl-api-validator/1.1.145) detects multiple errors in some of my submission files (EMBL format). 
+I wrote multiple scripts to fix the errors that the files had.
+Among the errors, some of the signs <, > are not correctly placed or not present at all in the embl file due to errors in the tbl file or errors from the Sequin program when reading the tbl file. 
 ```
-Wed Oct 12 09:48:17 BST 2016   USER  ERROR: No stop codon at the 3' end of the CDS feature translation. Consider 3' partial location.
+USER  ERROR: No stop codon at the 3' end of the CDS feature translation. Consider 3' partial location.
 ```
 To fix it, I used the script [AddSign.pl](https://github.com/lsayaved/Hello-World/blob/master/AddSign_1.pl)
 
