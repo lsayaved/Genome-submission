@@ -10,7 +10,7 @@ The EMBL validator somehow missed some of the following errors
 ```
 Wed Oct 12 09:48:17 BST 2016   USER  ERROR: No stop codon at the 3' end of the CDS feature translation. Consider 3' partial location.
 ```
-To fix it, I used the script [AddSign.pl](https://github.com/lsayaved/Hello-World/blob/master/AddSign.pl)
+To fix it, I used the script [AddSign.pl](https://github.com/lsayaved/Hello-World/blob/master/AddSign_1.pl)
 
 Sequin translated some of the first amino acid with an M, EMBL requires the real translation. The error is the following:
 ```
