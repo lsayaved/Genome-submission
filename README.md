@@ -16,7 +16,7 @@ To fix it, I used the script [AddSign.pl](https://github.com/lsayaved/Hello-Worl
 
 - Sequin translated some of the first amino acid with an M, EMBL requires the real translation. The error is the following:
 ```
-ERROR: Expected and conceptual translations are different. line: 2068 of
+ERROR: Expected and conceptual translations are different.
 ```
 The script [CheckConceptual.pl](https://github.com/lsayaved/Hello-World/blob/master/CheckConceptual.pl) should do the trick
 
