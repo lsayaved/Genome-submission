@@ -40,4 +40,4 @@ USER  ERROR: No stop codon at the 3' end of the CDS feature translation. Conside
 or
 ERROR: The protein translation of the protein coding feature does not start with a methionine. Consider 5' partial location
 ```
-The script [ForceSign5and3.pl](https://github.com/lsayaved/Hello-World/blob/master/ForceSign5and3.pl) will force the signs > and > in the corresponding lines (it already considers the locations that have complement)
+The script [ForceSign5and3.pl](https://github.com/lsayaved/Hello-World/blob/master/ForceSign5and3.pl) will force the signs < and > in the corresponding lines (it already considers the locations that have complement)
