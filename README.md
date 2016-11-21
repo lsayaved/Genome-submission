@@ -26,3 +26,6 @@ The script [CheckConceptual.pl](https://github.com/lsayaved/Hello-World/blob/mas
 ERROR: The protein translation of the protein coding feature contains internal stop codons
 ```
 The script [CheckEMBLaa.pl](https://github.com/lsayaved/Hello-World/blob/master/CheckEMBLaa.pl) should do the trick
+
+
+- Using the gbk [RAST annotation file](http://rast.nmpdr.org/) to produce an EMBL file for genome submission.
