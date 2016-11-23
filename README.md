@@ -29,15 +29,21 @@ The script [CheckEMBLaa.pl](https://github.com/lsayaved/Hello-World/blob/master/
 
 
 ## Genome submission to EMBL with RAST annotation
--Using the gbk [RAST annotation file](http://rast.nmpdr.org/) to produce an EMBL file for genome submission.
-Download the gbk file from RAST and convert to EMBL with the script [gb2embl](https://github.com/lsayaved/Hello-World/blob/master/gb2embl.pl)
--Change the format of the embl file with [ChangeID2.pl](https://github.com/lsayaved/Hello-World/blob/master/ChangeID2.pl) (adjust authors, manuscript detaitls and project number accordingly)
+- Using the gbk [RAST annotation file](http://rast.nmpdr.org/) to produce an EMBL file for genome submission.
+- Download the gbk file from RAST and convert to EMBL with the script [gb2embl.pl](https://github.com/lsayaved/Hello-World/blob/master/gb2embl.pl)
+- Change the format of the embl file with [ChangeID2.pl](https://github.com/lsayaved/Hello-World/blob/master/ChangeID2.pl) (adjust authors, manuscript detaitls and project number accordingly). Be aware that you need to change the script to your project number and publication details.
   
 ###### Errors during the genome submission
-
+- Partial proteins annotated by RAST do not include the signs > or < that should be included at the start or end of the gene position. The error is the following:
 ```
 USER  ERROR: No stop codon at the 3' end of the CDS feature translation. Consider 3' partial location.
 or
 ERROR: The protein translation of the protein coding feature does not start with a methionine. Consider 5' partial location
 ```
-The script [ForceSign5and3.pl](https://github.com/lsayaved/Hello-World/blob/master/ForceSign5and3.pl) will force the signs < and > in the corresponding lines (it already considers the locations that have complement)
+The script [ForceSign5and3.pl](https://github.com/lsayaved/Hello-World/blob/master/ForceSign5and3.pl) will force the signs < and > in the corresponding lines (it already considers the locations that have complement). This script uses the file VAL_ERROR produced by the embl validator
+
+- As with the GenDB annotation, some of the first amino acids are translated wrong (this problem is often present with partial proteins)
+```
+ERROR: Expected and conceptual translations are different.
+```
+The script [CheckConceptual.pl](https://github.com/lsayaved/Hello-World/blob/master/CheckConceptual.pl) should do the trick. If the genome annotation file has the locus tag after the translation some problems might occur. To fix it, I wrote the script [MoveLocusTagUp.pl](https://github.com/lsayaved/Hello-World/blob/master/MoveLocusTagUp.pl)
